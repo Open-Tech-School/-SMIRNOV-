@@ -16,7 +16,7 @@ if __name__ == '__main__':
     os.system('clear')
     os.system('cls')
     logger.success('Чат-бот запущен и успешно выполняет свои обязанности,происходит подключение к базе данных!')
-    database.connect()
+    db = database.BASEDATA()
     
 executor.start_polling(dp)
 

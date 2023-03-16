@@ -11,3 +11,5 @@ def startbutton():
     help = types.KeyboardButton("🎧 Техническая поддержка")
     start.add(attraction).add(products).add(info,help)
     return start
+
+#[Button Menu /Start] =================================================================
