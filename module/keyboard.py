@@ -12,4 +12,4 @@ def startbutton():
     start.add(attraction).add(products).add(info,help)
     return start
 
-#[Button Menu /Start] =================================================================
+#[Button Menu /] =================================================================

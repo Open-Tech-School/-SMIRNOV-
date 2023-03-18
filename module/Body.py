@@ -7,11 +7,12 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 import random
 import datetime
 
-logger.info('Тело работает')
 
 # ["Welcome"] ==============================================
 
 async def welcome(message):
+    if bd.find_user(id=message.from_user.id).fetchone() is None:
+        bd.create_user(message.from_user, message.from_user.id, 'Начинающий историк', datetime.datetime)
     await message.answer('''
 <code>📑 Бот Маресеевич / Приветствие</code>
 
@@ -28,7 +29,7 @@ async def welcome(message):
 
 async def attractioncity(message):
     await message.answer('ЭМ')
-
+    
 # ["F.A.Q"] ==============================================
 
 async def faqinfo(message):
